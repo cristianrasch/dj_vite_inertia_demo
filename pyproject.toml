@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "django-vite-inertia"
+version = "0.1.0"
+description = ""
+authors = ["Cristian Rasch <cristianrasch@fastmail.fm>"]
+readme = "README.md"
+packages = [{include = "django_vite_inertia"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^4.1.5"
+django-vite = "^2.0.2"
+inertia-django = "^0.5.2"
+django-js-routes = "^0.2.0"
+
+
+[tool.poetry.group.dev.dependencies]
+honcho = "^1.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

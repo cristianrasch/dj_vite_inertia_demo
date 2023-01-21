@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "vite --config vue_app/vite.config.js",
+    "build": "vite --config vue_app/vite.config.js build",
+    "preview": "vite --config vue_app/vite.config.js preview"
+  },
+  "devDependencies": {
+    "vite": "^4.0.4"
+  },
+  "dependencies": {
+    "@inertiajs/vue3": "^1.0.0"
+  }
+}

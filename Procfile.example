@@ -1,0 +1,2 @@
+web: poetry run python manage.py runserver
+vite: npm run dev

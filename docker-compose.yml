@@ -1,0 +1,35 @@
+version: '3'
+
+services:
+  vite:
+    container_name: dj_vite_inertia_vite
+    build:
+      context: .
+      dockerfile: Dockerfile.vite
+    command: npm run dev
+    expose:
+      - 3000
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/usr/src/app
+      - node_modules:/usr/src/app/node_modules
+      - vite_assets:/usr/src/app/dist
+
+  web:
+    container_name: dj_vite_inertia_web
+    build: .
+    command: ./manage.py runserver 0.0.0.0:8000
+    expose:
+      - 8000
+    ports:
+      - 8000:8000
+    volumes:
+      - .:/usr/src/app
+      - vite_assets:/usr/src/app/dist
+    depends_on:
+      - vite
+
+volumes:
+  node_modules:
+  vite_assets:
