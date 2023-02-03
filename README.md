@@ -40,8 +40,8 @@ To get rid of the entire setup, simply run this command:
 followed by:
 
 ```bash
-docker rmi django_vite_inertia-vite django_vite_inertia-web
-  && docker system prune --force
+docker rmi dj_vite_inertia_demo-vite dj_vite_inertia_demo-web &&
+  docker system prune --force
 ```
 
 to clean up all the app images created.
